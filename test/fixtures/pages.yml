@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  uri: MyText
+  mainTitle: MyString
+  bodyTitle: MyString
+  header: MyText
+  left: MyText
+  right: MyText
+  footer: MyText
+  inMenu: false
+  menuText: MyString
+  menuLink: MyText
+  auth: false
+  locked: false
+
+two:
+  uri: MyText
+  mainTitle: MyString
+  bodyTitle: MyString
+  header: MyText
+  left: MyText
+  right: MyText
+  footer: MyText
+  inMenu: false
+  menuText: MyString
+  menuLink: MyText
+  auth: false
+  locked: false

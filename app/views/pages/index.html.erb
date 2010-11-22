@@ -1,0 +1,42 @@
+<h1>Listing pages</h1>
+
+<table>
+  <tr>
+    <th>Uri</th>
+    <th>Maintitle</th>
+    <th>Bodytitle</th>
+    <th>Header</th>
+    <th>Left</th>
+    <th>Right</th>
+    <th>Footer</th>
+    <th>Inmenu</th>
+    <th>Menutext</th>
+    <th>Menulink</th>
+    <th>Auth</th>
+    <th>Locked</th>
+  </tr>
+
+<% for page in @pages %>
+  <tr>
+    <td><%=h page.uri %></td>
+    <td><%=h page.mainTitle %></td>
+    <td><%=h page.bodyTitle %></td>
+    <td><%=h page.header %></td>
+    <td><%=h page.left %></td>
+    <td><%=h page.right %></td>
+    <td><%=h page.footer %></td>
+    <td><%=h page.inMenu %></td>
+    <td><%=h page.menuText %></td>
+    <td><%=h page.menuLink %></td>
+    <td><%=h page.auth %></td>
+    <td><%=h page.locked %></td>
+    <td><%= link_to 'Show', page %></td>
+    <td><%= link_to 'Edit', edit_page_path(page) %></td>
+    <td><%= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New page', new_page_path %>

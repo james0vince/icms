@@ -1,0 +1,59 @@
+<h1>New page</h1>
+
+<% form_for(@page) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :uri %><br />
+    <%= f.text_area :uri %>
+  </p>
+  <p>
+    <%= f.label :mainTitle %><br />
+    <%= f.text_field :mainTitle %>
+  </p>
+  <p>
+    <%= f.label :bodyTitle %><br />
+    <%= f.text_field :bodyTitle %>
+  </p>
+  <p>
+    <%= f.label :header %><br />
+    <%= f.text_area :header %>
+  </p>
+  <p>
+    <%= f.label :left %><br />
+    <%= f.text_area :left %>
+  </p>
+  <p>
+    <%= f.label :right %><br />
+    <%= f.text_area :right %>
+  </p>
+  <p>
+    <%= f.label :footer %><br />
+    <%= f.text_area :footer %>
+  </p>
+  <p>
+    <%= f.label :inMenu %><br />
+    <%= f.check_box :inMenu %>
+  </p>
+  <p>
+    <%= f.label :menuText %><br />
+    <%= f.text_field :menuText %>
+  </p>
+  <p>
+    <%= f.label :menuLink %><br />
+    <%= f.text_area :menuLink %>
+  </p>
+  <p>
+    <%= f.label :auth %><br />
+    <%= f.check_box :auth %>
+  </p>
+  <p>
+    <%= f.label :locked %><br />
+    <%= f.check_box :locked %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', pages_path %>
