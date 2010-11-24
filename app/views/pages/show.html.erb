@@ -1,63 +1,60 @@
-<p>
-  <b>Uri:</b>
-  <%=h @page.uri %>
-</p>
-
-<p>
-  <b>Maintitle:</b>
-  <%=h @page.mainTitle %>
-</p>
-
-<p>
-  <b>Bodytitle:</b>
-  <%=h @page.bodyTitle %>
-</p>
-
-<p>
-  <b>Header:</b>
-  <%=h @page.header %>
-</p>
-
-<p>
-  <b>Left:</b>
-  <%=h @page.left %>
-</p>
-
-<p>
-  <b>Right:</b>
-  <%=h @page.right %>
-</p>
-
-<p>
-  <b>Footer:</b>
-  <%=h @page.footer %>
-</p>
-
-<p>
-  <b>Inmenu:</b>
-  <%=h @page.inMenu %>
-</p>
-
-<p>
-  <b>Menutext:</b>
-  <%=h @page.menuText %>
-</p>
-
-<p>
-  <b>Menulink:</b>
-  <%=h @page.menuLink %>
-</p>
-
-<p>
-  <b>Auth:</b>
-  <%=h @page.auth %>
-</p>
-
-<p>
-  <b>Locked:</b>
-  <%=h @page.locked %>
-</p>
+<% content_for :title do %>
+	<%=h @page.mainTitle %> | <%=h @page.bodyTitle %>
+<% end %>
 
 
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+<!-- <%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %> -->
+  <% content_for :header do %>
+	 <h1><a href="test" style="color:#fff;"><%=h @page.mainTitle %></a></h1>
+
+  <div id="navigation">
+    <ul>
+      <li><a href="test" style="background:#666">Dashboard</a></li>
+      <li><a href="test">Milestone</a></li>
+      <li><a href="test">Issues</a></li>
+      <li><a href="test">Calender</a></li>
+      <li><a href="test">Meetings</a></li>
+
+      <li><a href="test">Files</a></li>
+      <li><a href="test">Timeshets</a></li>
+      <li><a href="test">Reports</a></li>
+      <li><a href="test">Users</a></li>
+
+    </ul>
+  </div>
+  <% end %>
+
+<% content_for :breadcrumbs do %>
+	 	<ul>
+			<li><a href="test">New milestone</a></li> |
+			<li><a href="test">New Task</a></li> |
+      		 	<li><a href="test">Sheduale Meeting</a></li> |
+			<li><a href="test">Upload new file</a></li> |
+			<li><a href="test">New user</a></li> |
+			<li><a href="test">Files</a></li> |
+		</ul>
+<% end %>
+
+  <% content_for :left do %>
+	    <p><%=h @page.left%></p>
+  <% end %>
+
+  <% content_for :main do %>
+	<h2><%=h @page.bodyTitle %></h2>
+			<p><%= @page.header %></p>
+
+		
+  <% end %>
+  <% content_for :right do %>
+		<div class="right-boxes">
+			<h2>Right</h2>
+			<p>
+				<%=h @page.right%>
+			</p>
+
+		</div>
+  <% end %>
+  <% content_for :footer do %>
+	<%=h @page.footer %>
+  <% end %>

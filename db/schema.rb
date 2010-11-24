@@ -9,6 +9,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20101122155528) do
+
+  create_table "pages", :force => true do |t|
+    t.text     "uri"
+    t.string   "mainTitle"
+    t.string   "bodyTitle"
+    t.text     "header"
+    t.text     "left"
+    t.text     "right"
+    t.text     "footer"
+    t.boolean  "inMenu"
+    t.string   "menuText"
+    t.text     "menuLink"
+    t.boolean  "auth"
+    t.boolean  "locked"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

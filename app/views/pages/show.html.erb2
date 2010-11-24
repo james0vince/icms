@@ -1,0 +1,31 @@
+
+<p>
+ <h1> <%=h @page.mainTitle %></h1>
+</p>
+
+<p>
+ <h2> <%=h @page.bodyTitle %></h2>
+</p>
+
+<p>
+  <div style="width:500px"><%=h @page.header %></div>
+</p>
+
+<p>
+  <%=h @page.left %>
+</p>
+
+<p>
+  <%=h @page.right %>
+</p>
+
+<p>
+  <%=h @page.footer %>
+</p>
+
+
+
+
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

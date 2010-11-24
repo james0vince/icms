@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   # GET /pages
   # GET /pages.xml
   def index
+	#render :layout => false
     @pages = Page.find(:all)
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @pages }
@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.xml
   def show
-    @page = Page.find(params[:id])
+    @page = Page.find_by_uri(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,7 +34,7 @@ class PagesController < ApplicationController
 
   # GET /pages/1/edit
   def edit
-    @page = Page.find(params[:id])
+    @page = Page.find_by_uri(params[:id])
   end
 
   # POST /pages
@@ -57,7 +57,7 @@ class PagesController < ApplicationController
   # PUT /pages/1
   # PUT /pages/1.xml
   def update
-    @page = Page.find(params[:id])
+    @page = Page.find_by_uri(params[:id])
 
     respond_to do |format|
       if @page.update_attributes(params[:page])
